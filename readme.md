@@ -1,5 +1,4 @@
-# ERD PERPUSTAKAAN
-
+ERD PERPUSTAKAAN
 This project was created by Hosea from Koda Academy, to design a library application database using ERD with the Mermaid tool.
 
 ```mermaid
