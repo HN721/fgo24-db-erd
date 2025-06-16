@@ -6,53 +6,53 @@ This project was created by Hosea from Koda Academy, to design a library applica
 
 erDiagram
 direction LR
-    Buku  ||--o{ KATEGORI : Memiliki
-    Buku ||--o{ Petugas : Dikelola
-    Buku }o--||Rak_Buku: Disimpan-di
-    Buku }o--|| Transaksi : Mempunyai
-    Peminjam||--o{Transaksi : Melakukan
+    buku  ||--o{ kategori : Memiliki
+    buku ||--o{ petugas : Dikelola
+    buku }o--||rak-buku: Disimpan-di
+    buku }o--|| transaksi : Mempunyai
+    peminjam||--o{transaksi : Melakukan
 
 
-    Buku {
+    buku {
         string Id_buku PK
         string Judul
         string Isbn
         string Penulis
-        date Tanggal_rilis
-        string Penerbit
-        string Jumlah_Halaman
+        date tgl_rilis
+        string penerbit
+        string jumlah_halaman
         string sinopsis
-        string Id_Kategori FK
-        string Id_Rak_buku FK
-        string Id_Petugas FK
+        string id_kategori FK
+        string id_rak-buku FK
+        string id_petugas FK
     }
-    KATEGORI
-    KATEGORI {
-        string Id_Kategori PK
-        string Nama_Kategori
+    kategori
+    kategori {
+        string id_kategori PK
+        string nama_kategori
     }
-    Rak_Buku {
-        string Id_Rak_buku PK
+    rak-buku {
+        string id_rak-buku PK
         int Kapasitas
         int No_rak
 
     }
-    Petugas {
-        string Id_Petugas PK
-        string Nama
+    petugas {
+        string id_petugas PK
+        string nama
     }
-    Peminjam{
-        string id_Peminjam PK
-        string Nama
+    peminjam{
+        string id_peminjam PK
+        string nama
     }
 
-    Transaksi{
-        string id_Transaksi PK
-        string id_Buku FK
-        string id_Peminjam FK
+    transaksi{
+        string id_transaksi PK
+        string id_buku FK
+        string id_peminjam FK
         date tanggal_pemesanan
         date deadline
-        boolean Dikembalikan
+        boolean dikembalikan
 
 
     }
