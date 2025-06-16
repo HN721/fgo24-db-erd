@@ -1,4 +1,5 @@
-ERD PERPUSTAKAAN
+# ERD PERPUSTAKAAN
+
 This project was created by Hosea from Koda Academy, to design a library application database using ERD with the Mermaid tool.
 
 ```mermaid
@@ -8,8 +9,8 @@ direction LR
     Buku  ||--o{ KATEGORI : Memiliki
     Buku ||--o{ Petugas : Dikelola
     Buku }o--||Rak_Buku: Disimpan-di
-    Buku ||--o{ Transaksi : Dipinjam
-Peminjam ||--o{ Transaksi : Melakukan
+    Buku }o--|| Transaksi : Mempunyai
+    Peminjam||--o{Transaksi : Melakukan
 
 
     Buku {
